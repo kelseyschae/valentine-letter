@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="stage">
+    <h1 class="title">A little something for you!</h1>
+
+    <section class="envelope-wrap" aria-label="Interactive valentine letter">
+      <div
+        class="envelope"
+        id="envelope"
+        role="button"
+        tabindex="0"
+        aria-pressed="false"
+        aria-label="Open the envelope"
+      >
+        <div class="env-back"></div>
+
+        <article class="letter" id="letter" aria-live="polite">
+          <header class="letter-top">
+            <span class="to">To: <strong>KC</strong></span>
+            <span class="from">From: <strong>Kelsey</strong></span>
+          </header>
+
+          <div class="letter-body">
+            <p class="typed" id="typed"></p>
+          </div>
+
+          <footer class="letter-bottom">
+            <span class="xoxo">xoxo</span>
+
+            <button class="btn btn-secondary" id="confettiBtn" type="button">
+              More hearts 💖
+            </button>
+
+            <span class="hint" id="hint">Press Spacebar to open 💌</span>
+          </footer>
+        </article>
+
+        <div class="env-front"></div>
+        <div class="env-flap"></div>
+
+        <div class="seal" id="seal" aria-hidden="true">
+          <span class="seal-heart">♥</span>
+        </div>
+      </div>
+    </section>
+
+    <p class="sub">Tip: press <kbd>Spacebar</kbd> to open.</p>
+  </main>
+
+  <div class="hearts" id="hearts" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
